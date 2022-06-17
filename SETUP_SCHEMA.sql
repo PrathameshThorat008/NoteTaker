@@ -40,6 +40,6 @@ CREATE TABLE IF NOT EXISTS notes (
     ID varchar(36),
     Title varchar(100) DEFAULT "Note Title",
     Body text,
-    User_ID varchar(36),
+    User_ID varchar(36) NOT NULL,
     PRIMARY KEY(ID)
 );

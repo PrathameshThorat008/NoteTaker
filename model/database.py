@@ -149,6 +149,8 @@ class Database():
         - password : Password of User"""
 
         query = "DELETE FROM users WHERE ID = %s AND Password = %s"
+        query2 = "DELETE FROM notes WHERE User_ID = %s"
         password = sha256(password.encode("utf-8")).hexdigest()
 
-        return self.execute(query, params=(ID, password,), commit=True)
+        self.execute(query, params=(ID, password,), commit=True)
+        return self.execute(query2, params=(ID, ), commit=True)
