@@ -41,7 +41,7 @@ $ source ./env/bin/activate
 installing required dependencies
 
 ```console
-$ python install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 
 ## Step 4 :
